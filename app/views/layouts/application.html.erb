@@ -1,23 +1,79 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang='pl'>
   <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
     <title>Hans</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
   </head>
 
   <body>
-    <% if notice.present? %>
-      <p class='notice'><%= notice %></p>
-    <% end %>
+    <div class='container wrapper'>
+      <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+        ❅
+        </div>
+        <div class="snowflake">
+        ❆
+        </div>
+        <div class="snowflake">
+          ❅
+        </div>
+        <div class="snowflake">
+          ❆
+        </div>
+        <div class="snowflake">
+          ❅
+        </div>
+        <div class="snowflake">
+          ❆
+        </div>
+        <div class="snowflake">
+          ❅
+        </div>
+        <div class="snowflake">
+          ❆
+        </div>
+      </div>
 
-    <% if alert.present? %>
-      <p class='alert'><%= alert %></p>
-    <% end %>
+      <% if notice.present? %>
+        <div class='alert alert-primary'><%= notice %></p>
+      <% end %>
 
-    <%= yield %>
+      <% if alert.present? %>
+        <div class='alert alert-danger'><%= alert %></p>
+      <% end %>
+
+      <% if user_signed_in? %>
+        <div class='btn-group' role='group' aria-label='Actions'>
+          <%= link_to('Log out', destroy_user_session_path, method: :delete, class: 'btn btn-primary') %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+
+      <div class='d-flex justify-content-center'>
+        <iframe width='560' height='315' src='https://www.youtube.com/embed/E8gmARGvPlI' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
+      </div>
+    </div>
   </body>
 </html>
