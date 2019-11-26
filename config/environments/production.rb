@@ -80,7 +80,7 @@ Rails.application.configure do
     enable_starttls_auto: true,
   }
   # default url (e.g. for devise)
-  config.action_mailer.default_url_options = { host: ENV['BASE_HOST'] }
+  config.action_mailer.default_url_options = { protocol: 'https', host: ENV['BASE_HOST'] }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
