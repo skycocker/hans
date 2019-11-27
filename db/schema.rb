@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2019_11_23_184920) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id", "warden_id"], name: "index_user_wardens_on_user_id_and_warden_id", unique: true
-    t.index ["user_id"], name: "index_user_wardens_on_user_id"
-    t.index ["warden_id"], name: "index_user_wardens_on_warden_id"
+    t.index ["user_id"], name: "index_user_wardens_on_user_id", unique: true
+    t.index ["warden_id"], name: "index_user_wardens_on_warden_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|

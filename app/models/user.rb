@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  include HasUserWarden
+  include HasWardenedUser
 
   devise :database_authenticatable, :recoverable,
          :rememberable, :validatable

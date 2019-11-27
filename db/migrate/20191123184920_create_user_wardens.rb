@@ -4,8 +4,8 @@ class CreateUserWardens < ActiveRecord::Migration[6.0]
       t.integer :user_id
       t.integer :warden_id
 
-      t.index :user_id
-      t.index :warden_id
+      t.index :user_id,   unique: true
+      t.index :warden_id, unique: true
 
       t.index %i(user_id warden_id), unique: true
 
