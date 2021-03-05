@@ -3,22 +3,22 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # core
 ruby '2.6.5'
-gem 'rails', '~> 6.0.1'
+gem 'rails'
 
 # postgresql as the database for ActiveRecord
 gem 'pg'
 
 # webserver
-gem 'puma', '~> 4.1'
+gem 'puma'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '>= 6'
+gem 'sass-rails'
 
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
+gem 'webpacker'
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbolinks'
 
 # users & authentication
 gem 'devise'
